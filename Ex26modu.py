@@ -6,13 +6,18 @@ def verifica():
     global V1, V2
     S: int=0
     if V1>V2:
-        S= V1//V2 ==0
-        print(V1, "é multiplo de", V2)
-    elif V2>V1:
-        S= V2//V1 ==0
-        print(V2, "é multiplo de", V1)
-    else:
-        print(V1, "e", V2, "não são multiplos.")
+        S= (V1%V2) 
+        if S ==0: 
+            print(V1, "é multiplo de", V2)
+        else:
+            print(V1, 'não é multilpo de', V2)
+
+    if V2>V1:
+        S= (V2%V1) 
+        if S==0: 
+            print(V2, "é multiplo de", V1)
+        else:
+            print(V2, "e", V1, "não são multiplos.")
 
 def main():
     global V1, V2
